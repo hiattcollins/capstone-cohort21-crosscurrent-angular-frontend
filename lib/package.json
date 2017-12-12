@@ -1,0 +1,25 @@
+{
+  "description": "Crosscurrent text to music comparison app",
+  "main": "index.html",
+  "author": "D. Hiatt Collins",
+  "license": "ISC",
+  "name": "Crosscurrent",
+  "version": "0.1.0",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "grunt": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-nodeunit": "~1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "~3.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "jquery": "^3.2.1",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0",
+    "matchdep": "^2.0.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-route": "^1.6.6"
+  }
+}

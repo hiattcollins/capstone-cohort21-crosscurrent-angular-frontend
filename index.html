@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Crosscurrent</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body ng-app="crosscurrent">
+
+
+    <div>
+       <div ng-include="'partials/navbar.html'"></div>
+    </div>
+
+    <div> <!-- class="container" -->
+      <div ng-view></div>
+    </div>
+
+
+
+    <!-- CDN links -->
+    <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+
+    <!-- App.js file   -->
+    <script type="text/javascript" src="app/app.js"></script>
+
+    <!-- Factories -->
+    <!-- <script type="text/javascript" src="./app/factories/factory-user.js"></script> -->
+    <script type="text/javascript" src="./app/factories/factory-query.js"></script>
+
+    <!-- Controllers -->
+    <script type="text/javascript" src="./app/controllers/control-navbar.js"></script>
+    <script type="text/javascript" src="./app/controllers/control-query.js"></script>
+    <!-- <script type="text/javascript" src="./app/controllers/control-user.js"></script> -->
+
+  </body>
+</html>
