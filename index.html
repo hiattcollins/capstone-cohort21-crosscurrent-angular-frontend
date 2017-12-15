@@ -13,7 +13,7 @@
        <div ng-include="'partials/navbar.html'"></div>
     </div>
 
-    <div> <!-- class="container" -->
+    <div class="container">
       <div ng-view></div>
     </div>
 
@@ -29,13 +29,16 @@
     <script type="text/javascript" src="app/app.js"></script>
 
     <!-- Factories -->
-    <!-- <script type="text/javascript" src="./app/factories/factory-user.js"></script> -->
+    <script type="text/javascript" src="./app/factories/factory-user.js"></script>
     <script type="text/javascript" src="./app/factories/factory-query.js"></script>
 
     <!-- Controllers -->
     <script type="text/javascript" src="./app/controllers/control-navbar.js"></script>
+    <script type="text/javascript" src="./app/controllers/control-login.js"></script>
+    <script type="text/javascript" src="./app/controllers/control-user.js"></script>
     <script type="text/javascript" src="./app/controllers/control-query.js"></script>
-    <!-- <script type="text/javascript" src="./app/controllers/control-user.js"></script> -->
+    <script type="text/javascript" src="./app/controllers/control-history.js"></script>
+
 
   </body>
 </html>

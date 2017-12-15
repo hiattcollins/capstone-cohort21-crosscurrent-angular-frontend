@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("queryCtrl", function($scope, $window, $location, $q, $http, queryFactory){
+app.controller("queryCtrl", function($rootScope, $scope, $window, $location, $q, $http, queryFactory){
 
   console.log("control-query.js");
 
@@ -36,6 +36,6 @@ app.controller("queryCtrl", function($scope, $window, $location, $q, $http, quer
     };
 
     // showAllQueries();
-    newQuery(query_to_submit);
+    // newQuery(query_to_submit);
 
 });

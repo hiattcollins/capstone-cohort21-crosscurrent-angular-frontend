@@ -33,24 +33,43 @@ const app = angular.module("crosscurrent", ["ngRoute"]);
 //   });
 // });
 
+// let isAuth = (loginCtrl) => new Promise ( (resolve, reject) => {
+//   console.log("loginCtrl is:", loginCtrl);
+//   loginCtrl.checkToken()
+//   .then( (token) => {
+//     if(token){
+//       console.log("Authenticated");
+//       resolve();
+//     }else {
+//       console.log("Not authenticated");
+//       reject();
+//     }
+//   });
+// });
+
+
 
 app.config(($routeProvider, $httpProvider)=> {
     $routeProvider
     .when('/', {
-        templateUrl: 'partials/query.html',
-        controller: 'queryCtrl'
-        // resolve: {isAuth}
+      templateUrl: 'partials/query.html',
+      controller: 'queryCtrl'
+      // resolve: {isAuth}
     })
-    // .when('/login', {
-    //     templateUrl: 'partials/login.html',
-    //     controller: 'userCtrl'
-
-    // })
-    // .when('/shows', {
-    //     templateUrl: 'partials/show-events.html',
-    //     controller: 'eventShowCtrl',
-    //     resolve: {isAuth}
-    // })
+    .when('/login', {
+      templateUrl: 'partials/login.html',
+      controller: 'loginCtrl'
+    })
+    .when('/user', {
+      templateUrl: 'partials/user.html',
+      controller: 'userCtrl'
+      // resolve: {isAuth}
+    })
+    .when('/history', {
+      templateUrl: 'partials/history.html',
+      controller: 'historyCtrl'
+      // resolve: {isAuth}
+    })
     .otherwise('/');
 });
 
