@@ -42,6 +42,11 @@ app.controller("queryCtrl", function($rootScope, $scope, $window, $location, $q,
       });
     };
 
+    $scope.clearQuery = function () {
+      $scope.new_query.input_text = null;
+      $scope.songsToShow = [];
+    };
+
     // const newQuery = function(query){
     //   queryFactory.submitQuery(query)
     //   .then((result) => {
