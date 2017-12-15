@@ -25,16 +25,19 @@ app.factory("queryFactory", function ($q, $http, $window) {
         });
     };
 
+// headers: { 'Content-Type': 'application/json', 'Authorization': `${token}`}
+
     const submitQuery = function(queryObj, token) {
         let queryToSubmit = JSON.stringify(queryObj);
-        console.log("queryObj:", queryObj, "queryToSubmit:", queryToSubmit);
+        console.log("queryObj:", queryObj, "queryToSubmit:", queryToSubmit, "token:", token);
         return $q((resolve, reject) => {
-            $http.post(`http://localhost:3000/text_inputs`, queryToSubmit, {
-                headers: { 'Content-Type': 'application/json', 'Authorization': `${token}`}
+            $http.post(`http://localhost:3000/text_query`, queryToSubmit, {
+                headers: { 'Authorization': token}
             })
             .then((queryResults) => {
                 console.log("queryResults", queryResults);
-                resolve(queryResults);
+                let songArray = queryResults.data
+                resolve(songArray);
             })
             .catch((error) => {
                 console.log("submitQuery error", error);
