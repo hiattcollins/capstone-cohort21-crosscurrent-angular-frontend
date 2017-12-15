@@ -1,5 +1,29 @@
 <div>
-  <div class="page-header">
+<div class="page-header">
     <h1>History</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-md-5">
+
+
+      <!-- <div class="input-group">
+        <div class="form-group" style="padding:12px;">
+          <textarea class="form-control" style="width:400px; height:200px;" placeholder="Enter text to analyze" ng-model="new_query.input_text"></textarea><br>
+          <button ng-click="newQuery()" class="btn btn-info" style="margin-top:10px" type="button">Go!</button>
+          <button ng-click="clearQuery()" class="btn btn-info" style="margin-top:10px" type="button">Clear</button>
+        </div>
+      </div> -->
+    </div>
+    <div class="col-md-7">
+      <p>Text results:<p>
+      <div ng-repeat="song in songsToShow">
+        <div class="col-xs-5">Song: </div>
+        <div class="col-xs-7">Artist: </div>
+        <br>
+        <!-- <p>Song: {{song.song}} Artist: {{song.artist}}</p> -->
+      </div>
+    </div>
+    <div class="col-md-2"></div>
   </div>
 </div>
