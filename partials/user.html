@@ -1,0 +1,28 @@
+<div>
+   <div class="page-header">
+    <h1>Sign Up</h1>
+  </div>
+
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">@</span>
+    <input type="text" class="form-control" placeholder="Email Address" aria-describedby="basic-addon1" ng-model="userInfo.email">
+  </div>
+  <br>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">**</span>
+    <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1" ng-model="userInfo.password">
+  </div>
+  <br>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">FN</span>
+    <input type="text" class="form-control" placeholder="First Name" aria-describedby="basic-addon1" ng-model="userInfo.first_name">
+  </div>
+  <br>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">LN</span>
+    <input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1" ng-model="userInfo.last_name">
+  </div>
+  <div>
+    <button ng-click="newUserClicked()" class="btn btn-info" style="margin-top:10px" type="button" >Register</button>
+  </div>
+</div>
