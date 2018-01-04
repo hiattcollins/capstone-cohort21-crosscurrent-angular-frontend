@@ -36,7 +36,7 @@ app.factory("queryFactory", function ($q, $http, $window) {
             })
             .then((queryResults) => {
                 console.log("queryResults", queryResults);
-                let songArray = queryResults.data
+                let songArray = queryResults.data;
                 resolve(songArray);
             })
             .catch((error) => {

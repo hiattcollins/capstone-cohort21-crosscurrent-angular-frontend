@@ -35,7 +35,7 @@ app.controller("queryCtrl", function($rootScope, $scope, $window, $location, $q,
       }, $rootScope.auth_token)
       .then((resultingSongs) => {
         console.log("resultingSongs:", resultingSongs);
-        $scope.songsToShow = resultingSongs
+        $scope.songsToShow = resultingSongs;
       }, (error) => {
         console.log("error logging in", error);
         $window.alert("There was an error with the query.");
