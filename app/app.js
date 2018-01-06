@@ -53,8 +53,17 @@ app.config(($routeProvider, $httpProvider)=> {
     $routeProvider
     .when('/', {
       templateUrl: 'partials/query.html',
-      controller: 'queryCtrl'
-      // resolve: {isAuth}
+      controller: 'queryCtrl',
+      resolve:{
+        'check':function($rootScope, $location){   //function to be resolved, accessFac and $location Injected
+            if($rootScope.auth_token){    //check if the user has permission -- This happens before the page loads
+
+            }else{
+                $location.path('/login');                //redirect user to home if it does not have permission.
+                console.log("You don't have access here");
+            }
+        }
+      }
     })
     .when('/login', {
       templateUrl: 'partials/login.html',
@@ -67,8 +76,17 @@ app.config(($routeProvider, $httpProvider)=> {
     })
     .when('/history', {
       templateUrl: 'partials/history.html',
-      controller: 'historyCtrl'
-      // resolve: {isAuth}
+      controller: 'historyCtrl',
+      resolve:{
+        'check':function($rootScope, $location){   //function to be resolved, accessFac and $location Injected
+            if($rootScope.auth_token){    //check if the user has permission -- This happens before the page loads
+
+            }else{
+                $location.path('/login');                //redirect user to home if it does not have permission.
+                console.log("You don't have access here");
+            }
+        }
+      }
     })
     .otherwise('/');
 });
