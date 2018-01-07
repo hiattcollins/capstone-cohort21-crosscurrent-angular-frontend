@@ -15,7 +15,7 @@
     </div>
     <div class="col-md-7">
       <p>Songs matching text entered:<p>
-      <div ng-repeat="song in songsToShow">
+      <div ng-repeat="song in songsToShow | orderBy:'difference'">
         <div class="row">
           <div class="col-xs-5">Song: {{song.song}}</div>
           <div class="col-xs-7">Artist: {{song.artist}}</div>
