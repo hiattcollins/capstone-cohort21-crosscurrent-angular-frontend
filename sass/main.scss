@@ -1,6 +1,68 @@
+$page-main-blue: #1BA2FF;
+$page-main-gray: #5B5F63;
+$button-border-gray: #A9B1B9;
+$link-text-gray: #D5DCE0;
+
+#navbar-container {
+  background-color: $page-main-gray !important;
+}
+
+#crosscurrent-navbar {
+  background-color: $page-main-gray !important;
+}
+
+#navbar-small {
+  background-color: $page-main-gray !important;
+}
+
 .navbar-background {
   max-width: 100%;
   height: 67px !important;
   border-bottom: 2px solid white !important;
+  background-color: $page-main-gray !important;
+}
+
+.navbar-nav li a {
+  color: $link-text-gray !important;
+}
+
+.navbar-nav li a:hover {
+  color: $page-main-blue !important;
+  background-color: transparent !important;
+}
+
+.logo-font {
+  font-family: 'Warnes', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 2.4em;
+  color: $page-main-blue !important;
+}
+
+#view-container {
+  padding-top: 50px;
+}
+
+.btn-info {
+  background-color: $page-main-blue !important;
+  border-color: $button-border-gray  !important;
+}
+
+#landing-container {
+  padding-top: 50px;
+}
+
+#landing-text p {
+  font-size: 1.5em;
+  text-align: justify;
+}
+
+.history-row {
+  border-bottom: 2px solid $button-border-gray;
+  padding: 10px 0 15px 0;
+  margin: 10px 0 10px 0;
+}
+
+.song-result-row {
+  border-bottom: 2px solid $button-border-gray;
+  padding: 3px 0;
 }
 

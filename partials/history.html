@@ -1,27 +1,25 @@
 <div>
-<div class="page-header">
-    <h1>History</h1>
-  </div>
-
-  <div>
-<!--     <button ng-click="showHistory()" class="btn btn-info" style="margin-top:10px" type="button">Get History</button> -->
+  <div class="page-header">
+    <h2>Search History</h2>
   </div>
 
   <div ng-repeat="query in historyToShow">
-    <div class="row">
+    <div class="row history-row">
       <div class="col-md-5">
-        <p>Text entered:</p>
+        <p><strong>Text entered:</strong></p>
         <p>{{query.input_text}}</p>
-        <button ng-click="deleteOneQuery(query.id)" class="btn btn-info" style="margin-top:10px" type="button">Delete</button>
       </div>
-      <div class="col-md-7">
-        <p>Song results:<p>
+      <div class="col-md-6">
+        <p><strong>Song results:</strong><p>
         <div ng-repeat="song in query.song_results | orderBy:'difference'">
-          <div class="row">
-            <div class="col-xs-5">Song: {{song.song}}</div>
-            <div class="col-xs-7">Artist: {{song.artist}}</div>
+          <div class="row song-result-row">
+            <div class="col-xs-6">Song: {{song.song}}</div>
+            <div class="col-xs-6">Artist: {{song.artist}}</div>
           </div>
         </div>
+      </div>
+      <div class="col-md-1">
+        <button ng-click="deleteOneQuery(query.id)" class="btn btn-info" style="margin-top:10px" type="button">Delete</button>
       </div>
     </div>
   </div>
