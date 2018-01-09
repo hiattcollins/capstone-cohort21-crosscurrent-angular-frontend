@@ -14,6 +14,7 @@ app.controller("navbarCtrl", function($rootScope, $scope, $window, $location, $q
     // };
 
     $scope.logoutClicked = function () {
+      $rootScope.isLoggedIn = false;
       $rootScope.auth_token = null;
       $rootScope.user_id = null;
       $location.path("/login");

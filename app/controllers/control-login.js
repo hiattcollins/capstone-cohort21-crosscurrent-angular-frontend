@@ -19,7 +19,7 @@ app.controller("loginCtrl", function($rootScope, $scope, $window, $location, $q,
         console.log("information from auth:", userAuth);
         $rootScope.auth_token = userAuth.auth_token;
         $rootScope.user_id = userAuth.user_id;
-        $window.alert("Login successful!");
+        // $window.alert("Login successful!");
         $rootScope.isLoggedIn = true;
         $location.path("/query");
       }, (error) => {

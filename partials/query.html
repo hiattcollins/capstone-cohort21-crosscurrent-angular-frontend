@@ -1,28 +1,28 @@
 <div>
   <div class="page-header">
-    <h1>Query</h1>
+    <h2>Enter text to search for songs:</h2>
   </div>
 
   <div class="row">
     <div class="col-md-5">
-      <div class="input-group">
-        <div class="form-group" style="padding:12px;">
-          <textarea class="form-control" style="width:400px; height:200px;" placeholder="Enter text to analyze" ng-model="new_query.input_text"></textarea><br>
+      <div class="input-group" style="width:100%">
+        <div class="form-group" style="width:100%; padding:12px;">
+          <textarea class="form-control" style="width:100%; height:200px;" placeholder="Enter text to analyze" ng-model="new_query.input_text"></textarea><br>
           <button ng-click="newQuery()" class="btn btn-info" style="margin-top:10px" type="button">Go!</button>
           <button ng-click="clearQuery()" class="btn btn-info" style="margin-top:10px" type="button">Clear</button>
         </div>
       </div>
     </div>
-    <div class="col-md-7">
-      <p>Songs matching text entered:<p>
+    <div class="col-md-6">
+      <p><strong>Songs matching text entered:</strong><p>
       <div ng-repeat="song in songsToShow | orderBy:'difference'">
-        <div class="row">
-          <div class="col-xs-5">Song: {{song.song}}</div>
-          <div class="col-xs-7">Artist: {{song.artist}}</div>
+        <div class="row song-result-row">
+            <div class="col-xs-6">Song: {{song.song}}</div>
+            <div class="col-xs-6">Artist: {{song.artist}}</div>
         </div>
       </div>
     </div>
-    <div class="col-md-2"></div>
+    <div class="col-md-1"></div>
   </div>
 
 </div>

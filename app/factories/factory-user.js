@@ -39,33 +39,6 @@ app.factory("userFactory", function ($q, $http, $window) {
     });
   };
 
-// const getSavedEvents = function(firebase_userId){
-//         let events = [];
-//         console.log("url is", `${FirebaseCreds.databaseURL}/events.json?orderBy="user_id"&equalTo="${firebase_userId}"`); //   &equalTo="${firebase_userId}"
-//         return $q((resolve, reject) => {
-//             $http.get(`${FirebaseCreds.databaseURL}/events.json?orderBy="user_id"&equalTo="${firebase_userId}"`)
-//             .then((eventObject) => {
-//                 console.log("eventObject:", eventObject);
-//                 let eventCollection = eventObject.data;
-//                 console.log("eventCollection", eventCollection);
-//                 Object.keys(eventCollection).forEach((key) => {
-//                     eventCollection[key].data_id = key;
-//                     events.push(eventCollection[key]);
-//                 });
-
-//                 // arrayOfIndividualEvents = events;
-
-//                 // console.log("arrayOfIndividualEvents in getSavedEvents:", arrayOfIndividualEvents);
-
-//                 resolve(events);
-//             })
-//             .catch((error) => {
-//                 reject(error);
-//             });
-//         });
-//     };
-
-
   return { doLogIn, newUser };
 
 });
